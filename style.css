@@ -10,6 +10,54 @@ body {
   width: 100%;
   height: 100%;
   font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.nav--bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  align-items: center;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  background-color: #f5f4f9;
+}
+.nav--bar div:first-child img {
+  width: 80px;
+}
+.nav--bar div:last-child {
+  width: 60%;
+}
+
+.nav-li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.nav-li li {
+  cursor: pointer;
+  font-weight: 500;
+}
+.nav-li li:hover {
+  color: #0468d7;
+}
+.nav-li li img {
+  width: 1.4rem;
+}
+.nav-li button {
+  background-color: #0468d7;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.7rem 1.7rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+.nav-li button:hover {
+  background-color: #0356b3;
 }
 
 /* Section Layouts */
@@ -19,6 +67,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 65vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .above {
@@ -30,7 +81,7 @@ body {
   height: 95vh;
 }
 
-/* Element Styling for .above and .down */
+/* Common styles for sections */
 .above div:first-child,
 .down div:last-child,
 .above div:last-child,
@@ -44,6 +95,8 @@ body {
 .above div img,
 .down div img {
   width: 28rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .above div:last-child,
@@ -53,23 +106,19 @@ body {
   height: 100%;
   margin-left: 5rem;
 }
-
 .above div:last-child h4,
 .down div:first-child h4 {
   font-size: 1.3rem;
 }
-
 .above div:last-child h2,
 .down div:first-child h2 {
   font-size: 3.8rem;
 }
-
 .above div:last-child h3,
 .down div:first-child h3 {
   font-size: 1.2rem;
   opacity: 50%;
 }
-
 .above div:last-child button,
 .down div:first-child button {
   background-color: #0468d7;
@@ -81,8 +130,149 @@ body {
   font-weight: 700;
 }
 
-/* Responsive Design for .above and .down */
-@media (max-width: 768px) {
+/* Hero Section */
+.hero-page {
+  padding: 4rem 2rem;
+  min-height: 90vh;
+  background-color: #f5f4f9;
+  display: flex;
+  flex-direction: column;
+}
+.hero-page div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+.hero-page div:first-child div {
+  flex: 1;
+}
+.hero-page div:first-child div:first-child h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.hero-page div:first-child div:last-child {
+  display: flex;
+  justify-content: center;
+}
+.hero-page div:first-child div:last-child img {
+  width: 100%;
+  max-width: 27rem;
+  height: auto;
+}
+.hero-page h3 {
+  text-align: center;
+  margin-top: 7rem;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #1a1a1a;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Divyansh Section Styles */
+.divyansh .view5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 4rem;
+  background-color: #f5f4f9;
+}
+.divyansh .view5 .my-view-left {
+  width: 45%;
+}
+.divyansh .view5 .my-view-left img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+.divyansh .view5 .my-view-right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.divyansh .view5 .my-view-right .headline {
+  font-size: 1.2rem;
+  color: #0468d7;
+}
+.divyansh .view5 .my-view-right h1 {
+  font-size: 3.8rem;
+  line-height: 1.1;
+}
+.divyansh .view5 .my-view-right .para {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+.divyansh .view5 .my-view-right .btn {
+  background-color: #0468d7;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.divyansh .view6 {
+  padding: 6rem 2rem;
+  background-color: white;
+}
+.divyansh .view6 .get-started {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.divyansh .view6 .get-started h1 {
+  font-size: 3.5rem;
+}
+.divyansh .view6 .get-started p {
+  font-size: 1.3rem;
+  opacity: 0.7;
+}
+.divyansh .view6 .get-started .btn-div {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+.divyansh .view6 .get-started .btn-div button {
+  background-color: #0468d7;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.divyansh .view6 .get-started .btn-div p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  opacity: 1;
+}
+.divyansh .view6 .get-started .btn-div p span {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media screen and (orientation: portrait) {
   .above,
   .down {
     flex-direction: column;
@@ -90,132 +280,26 @@ body {
     padding: 2rem 1rem;
   }
   .above div:first-child,
-  .down div:last-child,
   .above div:last-child,
-  .down div:first-child {
+  .down div:first-child,
+  .down div:last-child {
     width: 100%;
     margin-left: 0;
     text-align: center;
-    padding: 2rem 0;
   }
-  .above div img,
-  .down div img {
+  .above img,
+  .down img {
     width: 100%;
-    height: 100%;
+    max-width: 20rem;
   }
-  .above div:last-child h2,
-  .down div:first-child h2 {
+  .above h2,
+  .down h2 {
     font-size: 2.5rem;
   }
-  .above div:last-child button,
-  .down div:first-child button {
+  .above button,
+  .down button {
     width: 60%;
-    margin: 0 auto;
   }
-}
-/* Larger Screen Layout Adjustments */
-@media (min-width: 1440px) {
-  .above,
-  .down {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  .above div img,
-  .down div img {
-    width: 35rem;
-  }
-  .above div:last-child,
-  .down div:first-child {
-    width: 35%;
-  }
-  .above div:last-child h2,
-  .down div:first-child h2 {
-    font-size: 4.5rem;
-  }
-}
-@media (min-width: 1920px) {
-  .above,
-  .down {
-    max-width: 1800px;
-  }
-  .above div img,
-  .down div img {
-    width: 40rem;
-  }
-  .above div:last-child h2,
-  .down div:first-child h2 {
-    font-size: 5rem;
-  }
-  .above div:last-child h3,
-  .down div:first-child h3 {
-    font-size: 1.5rem;
-  }
-}
-/* Navbar Styling */
-.nav--bar {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  align-items: center;
-  width: 98.6vw;
-}
-
-.nav--bar div:last-child {
-  width: 60%;
-}
-
-.nav-li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-
-.nav-li li img {
-  width: 1.4rem;
-}
-
-.nav-li button {
-  background-color: #0468d7;
-  color: white;
-  border: none;
-  border-radius: 1rem;
-  padding: 0.7rem 1.7rem;
-}
-
-/* Hero Section Styling */
-.hero-page {
-  padding-top: 3rem;
-  height: 99vh;
-  background-color: #f5f4f9;
-}
-
-.hero-page div:first-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-}
-
-.hero-page img {
-  width: 27rem;
-}
-
-.hero-page h1 {
-  font-size: 4rem;
-  line-height: 4rem;
-}
-
-.hero-page h3 {
-  text-align: center;
-  margin-top: 7rem;
-  font-size: 2.2rem;
-  line-height: 3rem;
-  font-weight: 400;
-}
-
-/* Responsive Styling for Hero Section */
-@media screen and (max-width: 480px) {
   .nav--bar {
     flex-direction: column;
     padding: 1rem;
@@ -227,16 +311,11 @@ body {
   .nav-li {
     flex-direction: column;
     gap: 1rem;
-    align-items: center;
   }
   .hero-page div:first-child {
     flex-direction: column-reverse;
     gap: 2rem;
     padding: 0 1rem;
-  }
-  .hero-page img {
-    width: 100%;
-    max-width: 20rem;
   }
   .hero-page h1 {
     font-size: 2.5rem;
@@ -249,26 +328,67 @@ body {
     margin-top: 3rem;
     padding: 0 1rem;
   }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .hero-page img {
-    width: 22rem;
+  .divyansh .view5 {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
-  .hero-page h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
+  .divyansh .view5 .my-view-left,
+  .divyansh .view5 .my-view-right {
+    width: 100%;
+  }
+  .divyansh .view5 .my-view-right {
+    align-items: center;
+  }
+  .divyansh .view5 .my-view-right h1 {
+    font-size: 2.5rem;
+  }
+  .divyansh .view5 .my-view-right .para {
+    text-align: center;
+  }
+  .divyansh .view6 {
+    padding: 3rem 1rem;
+  }
+  .divyansh .view6 .get-started h1 {
+    font-size: 2.5rem;
+  }
+  .divyansh .view6 .get-started .btn-div {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1366px) {
-  .hero-page div:first-child {
-    padding: 0 4rem;
+@media screen and (orientation: landscape) and (max-height: 768px) {
+  .above,
+  .down {
+    height: auto;
+    min-height: 100vh;
+  }
+  .above img,
+  .down img {
+    max-width: 20rem;
+  }
+  .above h2,
+  .down h2 {
+    font-size: 2.8rem;
   }
 }
-@media screen and (min-width: 1367px) {
-  .nav--bar {
-    padding: 1.5rem 8rem;
-    max-width: 2000px;
-    margin: 0 auto;
+@media screen and (min-width: 1920px) {
+  .above,
+  .down {
+    max-width: 1800px;
+  }
+  .above img,
+  .down img {
+    width: 40rem;
+  }
+  .above div:last-child h2,
+  .down div:last-child h2 {
+    font-size: 5rem;
+  }
+  .above div:last-child h3,
+  .down div:last-child h3 {
+    font-size: 1.5rem;
   }
   .hero-page img {
     width: 35rem;
@@ -280,5 +400,51 @@ body {
   .hero-page h3 {
     font-size: 2.5rem;
     line-height: 3.5rem;
+  }
+  .divyansh .view5 {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  .divyansh .view5 .my-view-right h1 {
+    font-size: 4.5rem;
+  }
+  .divyansh .view5 .my-view-right .para {
+    font-size: 1.4rem;
+  }
+  .divyansh .view6 .get-started {
+    max-width: 1800px;
+  }
+  .divyansh .view6 .get-started h1 {
+    font-size: 4.5rem;
+  }
+  .divyansh .view6 .get-started p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .above,
+  .down {
+    max-width: 2400px;
+  }
+  .above img,
+  .down img {
+    width: 45rem;
+  }
+  .above div:last-child h2,
+  .down div:last-child h2 {
+    font-size: 5.5rem;
+  }
+  .above div:last-child h3,
+  .down div:last-child h3 {
+    font-size: 1.6rem;
+  }
+  .above div:last-child h4,
+  .down div:last-child h4 {
+    font-size: 2rem;
+  }
+  .above div:last-child button,
+  .down div:last-child button {
+    padding: 1.2rem;
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=style.css.map */
