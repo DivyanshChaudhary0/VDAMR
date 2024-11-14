@@ -22,7 +22,7 @@ body {
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
-  background-color: #f5f4f9;
+  // background-color: #f5f4f9;
 
   div:first-child {
     img {
@@ -75,7 +75,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65vh;
+  // height: 65vh;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -83,6 +83,7 @@ body {
 
 .above {
   background-color: #fcfce2;
+  height: 75vh;
 }
 
 .down {
@@ -97,7 +98,7 @@ body {
 .down div:first-child {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   width: 40%;
 }
 
@@ -245,16 +246,19 @@ body {
   .view6 {
     padding: 6rem 2rem;
     background-color: white;
-
+    
     .get-started {
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
       display: flex;
+      padding: 5rem;
+      color: white;
       flex-direction: column;
+      border-radius: 1rem;
       gap: 1.5rem;
-      align-items: center;
-
+      align-items: start;
+      background-color: #042449;
       h1 {
         font-size: 3.5rem;
       }
@@ -303,7 +307,7 @@ body {
   .above,
   .down {
     flex-direction: column;
-    height: auto;
+    // height: auto;
     padding: 2rem 1rem;
     
     div:first-child,
@@ -325,6 +329,7 @@ body {
   .nav--bar {
     flex-direction: column;
     padding: 1rem;
+    background-color: white;
 
     div:last-child {
       width: 100%;
@@ -404,8 +409,8 @@ body {
 @media screen and (orientation: landscape) and (max-height: 768px) {
   .above,
   .down {
-    height: auto;
-    min-height: 100vh;
+    // height: auto;
+    // min-height: 100vh;
     
     img { max-width: 20rem; }
     h2 { font-size: 2.8rem; }
